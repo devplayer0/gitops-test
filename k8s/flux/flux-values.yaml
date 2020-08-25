@@ -1,0 +1,7 @@
+git:
+  url: "git@github.com:devplayer0/gitops-test.git"
+  branch: master
+  path: k8s
+syncGarbageCollection:
+  enabled: true
+  dry: false
