@@ -8,5 +8,6 @@ spec:
     repository: https://stefanprodan.github.io/podinfo
     name: podinfo
     version: 4.0.6
-    image:
-      tag: 4.0.3
+    values:
+      image:
+        tag: 4.0.3
