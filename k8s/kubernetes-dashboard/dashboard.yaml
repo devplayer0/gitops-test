@@ -8,3 +8,5 @@ spec:
     repository: https://kubernetes.github.io/dashboard/
     name: kubernetes-dashboard
     version: 2.3.0
+  values:
+    fullnameOverride: kubernetes-dashboard
