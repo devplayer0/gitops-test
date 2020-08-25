@@ -12,5 +12,4 @@ spec:
     fullnameOverride: kubernetes-dashboard
     protocolHttp: true
     service:
-      externalPort: 8080
-    extraArgs: [--enable-skip-login]
+      externalPort: 80
