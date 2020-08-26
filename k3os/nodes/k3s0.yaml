@@ -4,4 +4,4 @@ ssh_authorized_keys:
 k3os:
   modules:
     - kvm
-  k3s_args: [server, --cluster-init, --tls-san, k3s0, --disable, servicelb, --disable, traefik, --disable, local-storage]
+  k3s_args: [server, --tls-san, k3s0, --disable, servicelb, --disable, traefik, --disable, local-storage]

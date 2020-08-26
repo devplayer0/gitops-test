@@ -5,4 +5,4 @@ k3os:
   modules:
     - kvm
   token: '$K3S_TOKEN'
-  k3s_args: [server, --tls-san, k3s2, --server, https://k3s0.dyn.h.nul.ie:6443, --disable, servicelb, --disable, traefik, --disable, local-storage]
+  k3s_args: [agent]
