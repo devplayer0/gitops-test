@@ -1,0 +1,7 @@
+hostname: k3s1
+ssh_authorized_keys:
+  - github:devplayer0
+k3os:
+  modules:
+    - kvm
+  k3s_args: [server, --tls-san, k3s1, --server, https://k3s0.dyn.h.nul.ie]
