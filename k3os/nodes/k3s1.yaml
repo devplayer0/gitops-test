@@ -4,4 +4,5 @@ ssh_authorized_keys:
 k3os:
   modules:
     - kvm
-  k3s_args: [server, --tls-san, k3s1, --server, https://k3s0.dyn.h.nul.ie]
+  token: '$K3S_TOKEN'
+  k3s_args: [server, --tls-san, k3s1, --server, https://k3s0.dyn.h.nul.ie:6443, --disable, servicelb, --disable, traefik, --disable, local-storage]
