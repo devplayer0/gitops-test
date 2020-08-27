@@ -19,6 +19,7 @@ metadata:
   namespace: flux
   annotations:
     fluxcd.io/automated: 'true'
+    fluxcd.io/tag.fluxcloud: semver:~0.3
 spec:
   replicas: 1
   selector:
