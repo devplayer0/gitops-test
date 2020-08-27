@@ -7,7 +7,7 @@ spec:
   chart:
     git: https://github.com/netdata/helmchart
     ref: master
-    path: ''
+    path: '.'
   values:
     ingress:
       enabled: true
