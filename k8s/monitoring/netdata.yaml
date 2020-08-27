@@ -14,7 +14,7 @@ spec:
     ingress:
       enabled: true
       annotations:
-        kubernetes.io/ingress.class: null
+        kubernetes.io/ingress.class: ''
         kubernetes.io/tls-acme: 'false'
       hosts:
         - netdata.k8s
