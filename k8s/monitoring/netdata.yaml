@@ -4,6 +4,8 @@ metadata:
   name: netdata
   namespace: monitoring
 spec:
+  releaseName: netdata
+  helmVersion: v3
   chart:
     git: https://github.com/netdata/helmchart
     ref: master
