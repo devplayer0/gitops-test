@@ -1,14 +1,49 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: ghost
-  namespace: default
-spec:
-  chart:
-    repository: https://charts.bitnami.com/bitnami
     name: ghost
-    version: 10.1.4
-  values:
-    ghostUsername: admin
-    service:
-      type: ClusterIP
+    namespace: default
+spec:
+    chart:
+        repository: https://charts.bitnami.com/bitnami
+        name: ghost
+        version: 10.1.4
+    values:
+        ghostUsername: admin
+        ghostEmail: j@ckos.ie
+        ghostBlogTitle: It's a test!
+        ghostPassword: ENC[AES256_GCM,data:2bA7qsQIA6pRNw==,iv:JKEPXK9Wf4nIYlFzyd2gU7Xer/AVkip2bmkl9WNLSg8=,tag:/9/Lgj+t/a6UEfRNKEYAiw==,type:str]
+        mariadb:
+            db:
+                password: ENC[AES256_GCM,data:PePAYzOdAwXvJpkEmR/rHA==,iv:HzF+M4NDt8MhGH0V1iNlHYkQdCMzFb3D3z4iV0l4tV8=,tag:hSyinxg1dn6HYxElrO+mhQ==,type:str]
+        service:
+            type: ClusterIP
+        ingress:
+            enabled: true
+            hosts:
+            -   name: ghost.k8s
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-08-27T22:11:02Z'
+    mac: ENC[AES256_GCM,data:HC15g0N9Jg6ZGTiTl+pGEK7iRf5Z5ZnI3syl6unixRT3k0ZSwTEFpQXA3BN7+VkxWaNtgWah2WwfQ+kswjPNd1rsdL1Sg0vGv9hUvtu1Ie/k2zxWf9JkahAYLCdSMrwu0NXH63eBcdy/qv46NX1xKtUqPTXqmLh6pS21woNeRbA=,iv:jYYmW63cvuAExCBYKo8bHIkkvVSESWBgennfIGKjdcM=,tag:iU32+mUwCkIK5Au39xKfgg==,type:str]
+    pgp:
+    -   created_at: '2020-08-27T22:11:02Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMAxi+kczlu9MSAQf+N91tuDEOIvj4op6E2rP/7cmM/Wbm+17cfgzidJuQwrN+
+            aE2GbY68VP6HUQwYU7+K/IH01uKQ/HYheH8tiFY08EsVjUp2xtpuGqnJrs5wckzB
+            B9DKhaN87LhtMMGKCWInLKTkv56TtKdltASjoDEgzrl61CD28H0u72dtn79nB+nR
+            Ynrd1Dq9oZNlZf1biUKUu8xji7BhZ9GO5iXCNr6VTIGHnBdZsOUXahyTANnmLU6X
+            QgZw9t3IvQ1nT8jHJsbPk0eiYMnU/tC10BE3QKR4Fhp/k8z5GFffk/Zaazp5LYtH
+            EaEXXEE5+oN2c1JxcqUZ7kpHttP4kYfO8EIXmgnAt9JcAZsFDtNa6a2DZvJOhe5i
+            +bsvHV9zuhAaL6+EH+b05jvtaqOOow6/Dg9Az7tRDTZGYZgRpFXJZJdq2FX0VJ6a
+            RVleDCGaKrjLQ+5FzEBv9aILbhaJksyhNMarzXA=
+            =xmyk
+            -----END PGP MESSAGE-----
+        fp: BC05AF83345879FB1995111CF6264426CCC466E4
+    encrypted_regex: (P|p)assword$
+    version: 3.6.0
