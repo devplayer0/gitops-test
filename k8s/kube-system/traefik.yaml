@@ -38,7 +38,7 @@ metadata:
   namespace: kube-system
 spec:
   routes:
-  - match: Host(`traefik.k8s`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
+  - match: Host(`traefik.k8s`)
     kind: Rule
     services:
     - name: api@internal
