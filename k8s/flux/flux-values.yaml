@@ -2,6 +2,11 @@ git:
   url: "git@github.com:devplayer0/gitops-test.git"
   branch: master
   path: k8s
+  signingKey: BC05AF83345879FB1995111CF6264426CCC466E4
 syncGarbageCollection:
   enabled: true
   dry: false
+gpgKeys:
+  secretName: flux-pgp
+sops:
+  enabled: true
