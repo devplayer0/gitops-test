@@ -13,3 +13,11 @@ gpg --export-secret-keys --armor <key fingerprint> | \
     sops -e --encrypted-regex '^data$' --input-type yaml --output-type yaml /dev/stdin > \
     k8s/flux/pgp.yaml
 ```
+
+## Create a secret and encrypt it
+
+```bash
+kubectl -n my-namespace create secret generic my-secret --from-literal=password=hunter2 --dry-run=client -o yaml | \
+    sops -e --encrypted-regex '^data$' --input-type yaml --output-type yaml /dev/stdin > \
+    my-secret.yaml
+```
