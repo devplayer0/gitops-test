@@ -1,0 +1,14 @@
+
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: longhorn
+  namespace: longhorn-system
+spec:
+  releaseName: longhorn
+  helmVersion: v3
+  chart:
+    repository: https://charts.longhorn.io
+    name: longhorn
+    version: 1.0.2
