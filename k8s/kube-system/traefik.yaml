@@ -38,7 +38,7 @@ metadata:
   namespace: kube-system
 spec:
   routes:
-  - match: Host(`dashboard.traefik`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
+  - match: Host(`traefik.k8s`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
     kind: Rule
     services:
     - name: api@internal
@@ -54,3 +54,13 @@ metadata:
 spec:
   basicAuth:
     secret: traefik-dashboard-users
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: dashboard-redirect
+  namespace: kube-system
+spec:
+  redirectRegex:
+    regex: '^http://traefik.k8s/(.*)'
+    replacement: 'http://traefik.k8s/dashboard/${1}'
