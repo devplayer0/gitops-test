@@ -1,0 +1,52 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+    name: botkube
+    namespace: monitoring
+    annotations:
+        fluxcd.io/automated: "true"
+        filter.fluxcd.io/chart-image: semver:~0.10
+spec:
+    releaseName: botkube
+    helmVersion: v3
+    chart:
+        repository: https://infracloudio.github.io/charts
+        name: botkube
+        version: v0.10.0
+    values:
+        image:
+            repository: infracloudio/botkube
+            tag: v0.10.0
+        communications:
+            config:
+                settings:
+                    clustername: k3s
+            slack:
+                enabled: true
+                channel: gitops-test
+                token: ENC[AES256_GCM,data:IifoBLG/useNEXx8kiLBoM9Hc6kRep70AOqLZLHfTBeN/D2DM+BdSGgOSF7GdceCwdf4r6L+jOep,iv:I9D6Cr7ZgdkdGrEY/y/fo05756EJ0VWHl0GtDV1yFOo=,tag:8nYJiNaCZ9XvxBMN//TylA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-08-27T21:27:51Z'
+    mac: ENC[AES256_GCM,data:1dg0ZA3nbKgSBkKwDXaqKWi7CKpOm/dQw2ohgn0F6H2qt+BQdx1dq79eHKwMrPUu7ziF3blZ6q5W9MApB5XpZj11F6vm8nJVwtgZjYMFz7Sckqg2NTHvTKCHMtIpGE7kC8+PBrVs39S2TKKXBKT81HRiqRR9kb6CjftTQwG8q1w=,iv:La0lQ6Cn1kWNIfGS6NczTYJSvc+ITvv6E6bVSzRttt8=,tag:6nY8apCxX1sTo2EFA9zYng==,type:str]
+    pgp:
+    -   created_at: '2020-08-27T21:27:50Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMAxi+kczlu9MSAQf/cY9+OmHKnZFAhm9An8XnbkO/qggPFwYzmco65Pe9sfXp
+            /qGoajZkZzEmgicOZd1fH2efAHDHMHduofZXweCnvabuzxx6eeY7AsKh8cPyRk0O
+            1f9SzmeNjBSR93Uk0w++iFlfp+73ylgjgoenu1IRvNQBIYAFucCCtWCjwqDZHqRW
+            6a//ARqhMnFLTX3AHPeMYck77OJJpB9wyrUiUHt9izeh/Q9w2eKFUaHRwwwRV9W0
+            TOnXMESrQoJ467u1+A0kyBXRJpCK+Ym0qjHQMP06ghbm1/nI0czVwYJJSYWA6GgN
+            SnytuAPEeblIj/LPIOxIpYbHGc20P+r03ovRw1jDNtJeAQTJCN+TTKQFqrZTXknI
+            E/MnMKQk91t8oEC0vggugsVQdkW/9sWnaRfvJDcHsb1S8v3wu6brluuwJR5HYVtF
+            /mrWdv2rWqtET+TySG3YO7Bo4SIdt+ruExRa7lLOWA==
+            =r+EC
+            -----END PGP MESSAGE-----
+        fp: BC05AF83345879FB1995111CF6264426CCC466E4
+    encrypted_regex: ^token$
+    version: 3.6.0
