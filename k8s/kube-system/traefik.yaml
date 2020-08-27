@@ -1,0 +1,23 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: kube-system
+  annotations:
+    fluxcd.io/automated: 'true'
+    repository.fluxcd.io/traefik: image.name
+    tag.fluxcd.io/traefik: image.tag
+    filter.fluxcd.io/traefik: semver:~2.2
+spec:
+  releaseName: traefik
+  helmVersion: v3
+  chart:
+    repository: https://containous.github.io/traefik-helm-chart
+    name: traefik
+    version: 9.1.0
+  values:
+    image:
+      name: traefik
+      tag: 2.2.8
+    deployment:
+      replicas: 2
