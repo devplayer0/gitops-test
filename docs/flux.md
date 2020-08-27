@@ -3,11 +3,11 @@
 ```bash
 # Install flux
 kubectl apply -f k8s/flux/_namespace.yaml
-helm install flux -f k8s/flux/flux-values.yaml -n flux fluxcd/flux
+yq r k8s/flux/flux.yaml spec.values | helm install flux -f - -n flux fluxcd/flux
 
 # After it's running, grab the SSH pubkey and add to the repo
 fluxctl identity
 
 # Install Helm operator
-helm install helm-operator -f k8s/flux/helm-operator-values.yaml -n flux fluxcd/helm-operator
+yq r k8s/flux/helm-operator.yaml spec.values | helm install helm-operator -f - -n flux fluxcd/helm-operator
 ```
