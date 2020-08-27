@@ -3,7 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: fluxcloud
-  namespace: flux
+  namespace: monitoring
 spec:
   selector:
     name: fluxcloud
@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fluxcloud
-  namespace: flux
+  namespace: monitoring
   annotations:
     fluxcd.io/automated: 'true'
     fluxcd.io/tag.fluxcloud: semver:~0.3
