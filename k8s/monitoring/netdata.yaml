@@ -1,0 +1,16 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: netdata
+  namespace: monitoring
+spec:
+  chart:
+    git: https://github.com/netdata/helmchart
+    ref: master
+    path: ''
+  values:
+    ingress:
+      enabled: true
+      ingress:
+        hosts:
+          - netdata.k8s
