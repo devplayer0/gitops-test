@@ -17,10 +17,10 @@ spec:
         image:
             repository: infracloudio/botkube
             tag: v0.10.0
+        config:
+            settings:
+                clustername: k3s
         communications:
-            config:
-                settings:
-                    clustername: k3s
             slack:
                 enabled: true
                 channel: gitops-test
@@ -30,8 +30,8 @@ sops:
     gcp_kms: []
     azure_kv: []
     hc_vault: []
-    lastmodified: '2020-08-27T21:27:51Z'
-    mac: ENC[AES256_GCM,data:1dg0ZA3nbKgSBkKwDXaqKWi7CKpOm/dQw2ohgn0F6H2qt+BQdx1dq79eHKwMrPUu7ziF3blZ6q5W9MApB5XpZj11F6vm8nJVwtgZjYMFz7Sckqg2NTHvTKCHMtIpGE7kC8+PBrVs39S2TKKXBKT81HRiqRR9kb6CjftTQwG8q1w=,iv:La0lQ6Cn1kWNIfGS6NczTYJSvc+ITvv6E6bVSzRttt8=,tag:6nY8apCxX1sTo2EFA9zYng==,type:str]
+    lastmodified: '2020-08-27T21:30:59Z'
+    mac: ENC[AES256_GCM,data:G2b3Wp0Cmp0DD7HHNKmJS2CNuNWA1WRKUXTYS9shGjcgFd+NYYR1zJUwL7xAuqE8Zye6otKoLMVn1eQAkKDboUrUTW/52XyY+JI7ZZO9bNsstGRfg2Nh5lItMkcFdcogmVIaKJx6DgARMOQfT4Ttca9k4cHWO7XB2/ikt4K971I=,iv:DbfT4F/tH/ypJPXi71wRQuLabQCANWevZJQqtNtI9GQ=,tag:mRlDgHUsQdrb1RQMEFY/8g==,type:str]
     pgp:
     -   created_at: '2020-08-27T21:27:50Z'
         enc: |
