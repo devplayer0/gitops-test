@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: traefik-dashboard-system
+    name: traefik-dashboard-users
     namespace: kube-system
 data:
     users: ENC[AES256_GCM,data:V/Rj7xO/MCV7pcjf9luhUgx55Cb4oNeXC1FfFB+5MddFTFWAm0/TUG01hxcbgcycB9D5+wIHHUA=,iv:6hNUP+rDAckQvvhvZysQSkiHfJfdqSQfqmBQ3uflkBc=,tag:qdlcB30mB5DMh20prQJ0mw==,type:str]
