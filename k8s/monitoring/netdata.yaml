@@ -11,6 +11,5 @@ spec:
   values:
     ingress:
       enabled: true
-      ingress:
-        hosts:
-          - netdata.k8s
+      hosts:
+        - netdata.k8s
