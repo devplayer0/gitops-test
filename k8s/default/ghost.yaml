@@ -1,0 +1,14 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: ghost
+  namespace: default
+spec:
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: ghost
+    version: 10.1.4
+  values:
+    ghostUsername: admin
+    service:
+      type: ClusterIP
