@@ -21,4 +21,4 @@ spec:
       create: true
     ingress:
       enabled: true
-      hostname: kube-ops-view
+      hostname: kube-ops-view.k8s
