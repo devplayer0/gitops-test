@@ -12,3 +12,7 @@ spec:
     repository: https://charts.longhorn.io
     name: longhorn
     version: 1.0.2
+  values:
+    ingress:
+      enabled: true
+      host: longhorn.k8s
