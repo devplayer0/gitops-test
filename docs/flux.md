@@ -1,8 +1,11 @@
 # Flux CD bootstrap
 
+Set up SOPS as in [sops.md](sops.md) first.
+
 ```bash
-# Install flux
 kubectl apply -f k8s/flux/_namespace.yaml
+# Import PGP key as secret
+sops -d k8s/flux/pgp.yaml | kubectl apply -f -
 yq r k8s/flux/flux.yaml spec.values | helm install flux -f - -n flux fluxcd/flux
 
 # After it's running, grab the SSH pubkey and add to the repo
