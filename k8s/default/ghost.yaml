@@ -10,3 +10,5 @@ spec:
     version: 10.1.4
   values:
     ghostUsername: admin
+    service:
+      type: ClusterIP
