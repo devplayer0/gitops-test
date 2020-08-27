@@ -15,6 +15,8 @@ spec:
         ghostBlogTitle: It's a test!
         ghostPassword: ENC[AES256_GCM,data:2bA7qsQIA6pRNw==,iv:JKEPXK9Wf4nIYlFzyd2gU7Xer/AVkip2bmkl9WNLSg8=,tag:/9/Lgj+t/a6UEfRNKEYAiw==,type:str]
         mariadb:
+            rootUser:
+                password: ENC[AES256_GCM,data:8V28Ts0PQKOyBA==,iv:SWvSjOfmF4mWRzNfMaxLb/q+uYwzWTaVWupaX5YCBNg=,tag:FpldQuYyzJN01ZBsA0a6qw==,type:str]
             db:
                 password: ENC[AES256_GCM,data:PePAYzOdAwXvJpkEmR/rHA==,iv:HzF+M4NDt8MhGH0V1iNlHYkQdCMzFb3D3z4iV0l4tV8=,tag:hSyinxg1dn6HYxElrO+mhQ==,type:str]
         service:
@@ -28,8 +30,8 @@ sops:
     gcp_kms: []
     azure_kv: []
     hc_vault: []
-    lastmodified: '2020-08-27T22:21:03Z'
-    mac: ENC[AES256_GCM,data:aIzxKKB0NxB6Vn/lDZGQKpYl6bpkAKYXIFBv7boLALHnH0X+JdNKnvvfiphWkMiyPIkcHYaquJgn0KQC4rV0ZVhagEbXCk+w0rWHfVRTVpWsFEtsPeC1Ilg/yNUjAAYJv7RhBoH50BTTxtsgY9MVgN4l5SQlQ5XjhBVmC6iqLxc=,iv:BjVF5rMkYO4k2XrepSZbnkMzxbnZ5cp5A5f0RIcIWPk=,tag:jkTlHps+W88CAfTTSAWj1Q==,type:str]
+    lastmodified: '2020-08-27T22:27:12Z'
+    mac: ENC[AES256_GCM,data:4KtiUrGlzGA1DXleC4C3nGCV96uFYUX5dXVpz3o8jHkMmD8fyaL7X7um/6KPvEBJOh6cP+bah+rRkG5ZLih9XaMehT0YnB/rULpaoMlkXO5Qh3YWETYMA0KFYqV6cY55F7Y66fHM7dkO5H5pFf0wXEGZdIEAUvj11n0HFpiv1gY=,iv:nlrchN7ly5uUfIrMN73U51PAcZkJwN1C/9Q/mtfUQIU=,tag:EplzyY70nhPgoxxKk6ZCLg==,type:str]
     pgp:
     -   created_at: '2020-08-27T22:11:02Z'
         enc: |
