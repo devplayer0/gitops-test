@@ -18,4 +18,4 @@ spec:
       - name: lan
         protocol: layer2
         addresses:
-          - 10.16.169.1-10.16.168.254
+          - 10.16.169.1-10.16.169.254
