@@ -9,6 +9,7 @@ spec:
         name: ghost
         version: 10.1.4
     values:
+        ghostHost: ghost.k8s
         ghostUsername: admin
         ghostEmail: j@ckos.ie
         ghostBlogTitle: It's a test!
@@ -27,8 +28,8 @@ sops:
     gcp_kms: []
     azure_kv: []
     hc_vault: []
-    lastmodified: '2020-08-27T22:11:02Z'
-    mac: ENC[AES256_GCM,data:HC15g0N9Jg6ZGTiTl+pGEK7iRf5Z5ZnI3syl6unixRT3k0ZSwTEFpQXA3BN7+VkxWaNtgWah2WwfQ+kswjPNd1rsdL1Sg0vGv9hUvtu1Ie/k2zxWf9JkahAYLCdSMrwu0NXH63eBcdy/qv46NX1xKtUqPTXqmLh6pS21woNeRbA=,iv:jYYmW63cvuAExCBYKo8bHIkkvVSESWBgennfIGKjdcM=,tag:iU32+mUwCkIK5Au39xKfgg==,type:str]
+    lastmodified: '2020-08-27T22:21:03Z'
+    mac: ENC[AES256_GCM,data:aIzxKKB0NxB6Vn/lDZGQKpYl6bpkAKYXIFBv7boLALHnH0X+JdNKnvvfiphWkMiyPIkcHYaquJgn0KQC4rV0ZVhagEbXCk+w0rWHfVRTVpWsFEtsPeC1Ilg/yNUjAAYJv7RhBoH50BTTxtsgY9MVgN4l5SQlQ5XjhBVmC6iqLxc=,iv:BjVF5rMkYO4k2XrepSZbnkMzxbnZ5cp5A5f0RIcIWPk=,tag:jkTlHps+W88CAfTTSAWj1Q==,type:str]
     pgp:
     -   created_at: '2020-08-27T22:11:02Z'
         enc: |
