@@ -1,8 +1,36 @@
 hostname: k3s1
 ssh_authorized_keys:
-  - github:devplayer0
+- github:devplayer0
 k3os:
-  modules:
+    modules:
     - kvm
-  token: '$K3S_TOKEN'
-  k3s_args: [agent, --server, 'https://k3s0.dyn.h.nul.ie:6443']
+    token: ENC[AES256_GCM,data:dlwNIJZbMeIPtLimk9BLmzjVgpi9qdF+iNgx3GnSbmGTw4SOxZWa86ppD+WTX3Ci/kaXLgpG3LEfA19Telkjq5llEvOxJsMFqbsezFWZWyGVAkN0Bt2wwOtuVlsblz3hO3C9BVeXDhRTVwOa,iv:tmyWOZCZB+2rEmOEz2PqpwvlTRZMxpwWe+HPX5PKYEw=,tag:V7irf0FOnV0hT0XRTUi/xA==,type:str]
+    k3s_args:
+    - agent
+    - --server
+    - https://k3s0.dyn.h.nul.ie:6443
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-08-27T13:56:36Z'
+    mac: ENC[AES256_GCM,data:9D1ip/h0SOHVItWFqj43/l39nvZkD6/j/i+fKh0p3geO8gyw28JYHowxnzfUvrSls8Lr5Big4Y5S5vjryg8WA0FhklduEKpZHQjfb9iAI6DSAbM+sVWiIPhJ60IDVLycLcFSarNQATjdaZyw0jObrXrIQylpwuuw3ZEOmvnWq/0=,iv:TKeIShkrm7T5nmvnxYkOOe37qx97sSDPT77bCXiXsK4=,tag:mFwe4bH591OECXY04noCrQ==,type:str]
+    pgp:
+    -   created_at: '2020-08-27T13:56:35Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMAxi+kczlu9MSAQgAkDQHZvXwn2JbaGM8Wch0UqMiC/4cmns0r0lhclFosTma
+            cuScj0A+x3dwaJRS1PSErCiwhhFEkZpZqdIghnlm18xZ6fJYAWfMqxGb3NH1d532
+            lvm4ap+7LuwhLzmfnI9/1hl8udef/SQSJTdhvXoubcIukToG12M3t6b9i9njkzpq
+            qWD3D9Dzvj7wo+KQMSHOh2oUtxaXvD+qXqqfaEIouTA32sUTOydRWQzhueofrjpT
+            4CmvggOtpbP94XIaRpHqxk79/d/WRnZW1u6Cs+iAcPMl1vgkQuzAsFYOBT8Wga67
+            HBbjyWe9Pbk+Dabvs1vKwHp8197zAj4koB2Arzp1utJeAUKkSEcj/YBu9X+qf+kz
+            DP58oT9K89gXbZ6GcIJhjWx7q5xsZs47xDd+UXdFFblhDXMwhesfoXgPQDJldzSS
+            +xfCo7fV7mQquHERePyHromt7Y18P76pEV2x5fGUgw==
+            =O8EL
+            -----END PGP MESSAGE-----
+        fp: BC05AF83345879FB1995111CF6264426CCC466E4
+    encrypted_regex: ^token$
+    version: 3.6.0
