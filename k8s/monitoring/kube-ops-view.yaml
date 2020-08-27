@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: hjacobs/kube-ops-view
-      tag: 19.9.0
+      tag: 20.4.0
     rbac:
       create: true
     ingress:
