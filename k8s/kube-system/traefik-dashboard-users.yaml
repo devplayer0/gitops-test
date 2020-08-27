@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: traefik-dashboard-system
+    namespace: kube-system
+data:
+    users: ENC[AES256_GCM,data:V/Rj7xO/MCV7pcjf9luhUgx55Cb4oNeXC1FfFB+5MddFTFWAm0/TUG01hxcbgcycB9D5+wIHHUA=,iv:6hNUP+rDAckQvvhvZysQSkiHfJfdqSQfqmBQ3uflkBc=,tag:qdlcB30mB5DMh20prQJ0mw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-08-27T21:03:20Z'
+    mac: ENC[AES256_GCM,data:0nx0QbnbsuXkw20+pZQ5ZZYWpy8WffQGFFHdyZi0Ug2sxIbZrE2BZvcOpfz0wGLAoEgSMJex6j2EktWY0iUVqP7ocmqp2CXtIA8W0O+4y3/CXslmR60nEiZC+TwybRpE/2bk2Z3PQmPc5r6jfHk1tsg7l1k50s+eZ0sh5KbJIiM=,iv:v/YTdZuifWS4HE+KpPpF8rBcVJo9fz6ANB44xmIdF7M=,tag:JBeasrVwZzIBGJnPvJFj1A==,type:str]
+    pgp:
+    -   created_at: '2020-08-27T21:03:19Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMAxi+kczlu9MSAQf9FoXeYwEU0e8fj4KkvUgMenwqzHvm4Cr/Cnd6uVHAcDRb
+            ISndnr7Gssldbw+x0/U518CtBw/jvteCeoDTdUwhdBzfl4/QAiMmR9gMNUxu2oRl
+            Li4tT3mlmX0Daqc5LpCALebAwIsGGgtBHPCrbgBs4zyImKxmeERYDFOEFFGbtWdu
+            l05JUOvgfGOC0EULRC8Jw9MmBHM15pVbOSWDfs7NVLJD9cffyuqXFKCVhbhL+TQ2
+            7/SN/7OwbIEmomyMmJM7JFHaKunqjoEqzVykc5Cpn+1OILfvioTLtjgw+dIpRLNi
+            LHGJxJhbNbXZY+MJCt0TxApR0wwKysX3l7zjx2hp+tJcAY9EUAvIlVYKBk+Mwm39
+            5OBvdbxaq3TDWueF74pvuju49iA48gSixpwe7HgjOK+wc8JSK+1947dZ2cX65Uzi
+            bToq3KZGWjrqsG/kKeQxovyyRhOzc90gftTd/Do=
+            =CqZK
+            -----END PGP MESSAGE-----
+        fp: BC05AF83345879FB1995111CF6264426CCC466E4
+    encrypted_regex: ^users$
+    version: 3.6.0

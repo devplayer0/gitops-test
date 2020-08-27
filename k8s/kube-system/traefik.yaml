@@ -22,6 +22,11 @@ spec:
       tag: v2.2.8
     deployment:
       replicas: 2
+    logs:
+      general:
+        level: DEBUG
     ingressRoute:
       dashboard:
         enabled: false
+    additionalArguments:
+      - '--api.dashboard=true'
