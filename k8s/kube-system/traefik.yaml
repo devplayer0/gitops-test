@@ -30,6 +30,7 @@ spec:
         enabled: false
     additionalArguments:
       - '--api.dashboard=true'
+      - '--serversTransport.insecureSkipVerify=true'
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
