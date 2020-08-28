@@ -2,14 +2,14 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: dashboard
-  namespace: kubernetes-dashboard
+  namespace: monitoring
 spec:
   chart:
     repository: https://kubernetes.github.io/dashboard/
     name: kubernetes-dashboard
     version: 2.3.0
   values:
-    fullnameOverride: kubernetes-dashboard
-    protocolHttp: true
-    service:
-      externalPort: 80
+    ingress:
+      enabled: true
+      hosts:
+        - dashboard.k8s
