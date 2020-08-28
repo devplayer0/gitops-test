@@ -15,3 +15,5 @@ spec:
       enabled: true
       hosts:
         - dashboard.k8s
+      annotations:
+        traefik.ingress.kubernetes.io/router.tls: "true"
