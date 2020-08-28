@@ -4,6 +4,8 @@ metadata:
   name: dashboard
   namespace: monitoring
 spec:
+  releaseName: dashboard
+  helmVersion: v3
   chart:
     repository: https://kubernetes.github.io/dashboard/
     name: kubernetes-dashboard
@@ -11,5 +13,8 @@ spec:
   values:
     ingress:
       enabled: true
+      protocolHttp: true
+      service:
+        externalPort: 80
       hosts:
         - dashboard.k8s
