@@ -29,6 +29,7 @@ spec:
       dashboard:
         enabled: false
     additionalArguments:
+      - '--accesslog=true'
       - '--api.dashboard=true'
       - '--serversTransport.insecureSkipVerify=true'
 ---
