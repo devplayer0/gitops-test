@@ -21,7 +21,7 @@ spec:
       name: traefik
       tag: v2.2.8
     deployment:
-      replicas: 2
+      replicas: 1
     logs:
       general:
         level: DEBUG
