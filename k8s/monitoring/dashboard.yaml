@@ -11,10 +11,10 @@ spec:
     name: kubernetes-dashboard
     version: 2.3.0
   values:
+    protocolHttp: true
+    service:
+      externalPort: 80
     ingress:
       enabled: true
-      protocolHttp: true
-      service:
-        externalPort: 80
       hosts:
         - dashboard.k8s
