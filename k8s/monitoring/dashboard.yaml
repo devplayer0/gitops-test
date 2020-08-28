@@ -11,6 +11,7 @@ spec:
     name: kubernetes-dashboard
     version: 2.3.0
   values:
+    extraArgs: ['--authentication-mode=basic']
     ingress:
       enabled: true
       hosts:
