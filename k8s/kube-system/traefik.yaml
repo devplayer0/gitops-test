@@ -19,7 +19,7 @@ spec:
   values:
     image:
       name: traefik
-      tag: v2.2.8
+      tag: 2.2.10
     deployment:
       replicas: 1
     logs:
@@ -29,8 +29,8 @@ spec:
       dashboard:
         enabled: false
     additionalArguments:
-      - '--accesslog=true'
-      - '--api.dashboard=true'
+    - '--accesslog=true'
+    - '--api.dashboard=true'
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
@@ -45,7 +45,7 @@ spec:
     - name: api@internal
       kind: TraefikService
     middlewares:
-      - name: auth
+    - name: auth
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
