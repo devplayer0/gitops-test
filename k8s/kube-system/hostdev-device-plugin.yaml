@@ -21,7 +21,7 @@ spec:
       hostNetwork: true
       containers:
         - name: hostdev
-          image: billimek/k8s-hostdev-plugin:0.1
+          image: billimek/k8s-hostdev-plugin:1.0.4
           args: ['--devs', '/dev/kvm:rwm']
           securityContext:
             privileged: true
