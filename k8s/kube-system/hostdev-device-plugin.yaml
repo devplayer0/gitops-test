@@ -3,6 +3,8 @@ kind: DaemonSet
 metadata:
   name: hostdev-device-plugin
   namespace: kube-system
+  annotations:
+    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
@@ -19,7 +21,7 @@ spec:
       hostNetwork: true
       containers:
         - name: hostdev
-          image: dtp263/k8s-hostdev-plugin
+          image: billimek/k8s-hostdev-plugin:0.1
           args: ['--devs', '/dev/kvm:rwm']
           securityContext:
             privileged: true
