@@ -13,6 +13,3 @@ spec:
     repository: https://charts.jetstack.io/
     name: cert-manager
     version: v1.0.1
-  values:
-    extraArgs:
-      - '--enable-certificate-owner-ref'
