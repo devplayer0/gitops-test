@@ -4,7 +4,7 @@ metadata:
   name: hostdev-device-plugin
   namespace: kube-system
   annotations:
-    fluxcd.io/automated: 'false'
+    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
@@ -21,8 +21,7 @@ spec:
       hostNetwork: true
       containers:
         - name: hostdev
-          image: ghcr.io/devplayer0/k8s-hostdev-plugin:latest
-          imagePullPolicy: Always
+          image: ghcr.io/devplayer0/k8s-hostdev-plugin:v0.2.1
           # 110, one for every pod (potentially!)
           args: ['--devs', '/dev/kvm:rw:110']
           securityContext:
