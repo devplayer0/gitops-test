@@ -21,7 +21,7 @@ spec:
       hostNetwork: true
       containers:
         - name: hostdev
-          image: devplayer0/k8s-hostdev-plugin:latest
+          image: ghcr.io/devplayer0/k8s-hostdev-plugin:latest
           imagePullPolicy: Always
           # 110, one for every pod (potentially!)
           args: ['--devs', '/dev/kvm:rw:110']
